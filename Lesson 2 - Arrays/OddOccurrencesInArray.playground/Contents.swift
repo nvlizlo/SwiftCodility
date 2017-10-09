@@ -3,27 +3,22 @@
 import UIKit
 
 func solution(_ A: inout [Int]) -> Int {
-    var result = -1
+    var pairs = [Int: Bool]()
     
-    var i = 0
-    while i < A.count {
-        
-        for j in (i+1)..<A.count {
-            
-            if A[i] == A[j] {
-                A.remove(at: j)
-                A.remove(at: i)
-                i -= 1
-                break
-            }
-            
+    for element in A {
+        if pairs[element] == false {
+            pairs[element] = true
+        } else {
+            pairs[element] = false
         }
-        i+=1
     }
     
-    result = A[0]
-    print(A)
-    return result
+    for pair in pairs {
+        if pair.value == false {
+            return pair.key
+        }
+    }
+    return 0
 }
 
 var array = [9,9,3,3,6]
