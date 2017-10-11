@@ -6,20 +6,16 @@ func solution(_ A: inout [Int]) -> Int {
     var pairs = [Int: Bool]()
     
     for element in A {
-        if pairs[element] == false {
-            pairs[element] = true
+        if pairs[element] == true {
+            pairs.removeValue(forKey: element)
         } else {
-            pairs[element] = false
+            pairs[element] = true
         }
     }
     
-    for pair in pairs {
-        if pair.value == false {
-            return pair.key
-        }
-    }
-    return 0
+    let returnedValue = pairs.keys.first ?? 0
+    return returnedValue
 }
 
-var array = [9,9,3,3,6]
+var array = [4,1,4]
 solution(&array)
