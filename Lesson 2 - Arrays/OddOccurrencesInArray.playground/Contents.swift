@@ -3,17 +3,13 @@
 import UIKit
 
 func solution(_ A: inout [Int]) -> Int {
-    var pairs = [Int: Bool]()
+    var returnedValue = 0
     
-    for element in A {
-        if pairs[element] == true {
-            pairs.removeValue(forKey: element)
-        } else {
-            pairs[element] = true
-        }
+    for i in A {
+        returnedValue ^= i
+        print(returnedValue)
     }
     
-    let returnedValue = pairs.keys.first ?? 0
     return returnedValue
 }
 
