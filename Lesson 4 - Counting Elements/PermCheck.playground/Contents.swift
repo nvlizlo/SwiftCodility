@@ -3,18 +3,17 @@
 import UIKit
 
 public func solution(_ A : inout [Int]) -> Int {
-    A.insert(0, at: 0)
     var a = Array(repeating: 0, count: A.count)
-    a[0] = 1
-    for i in 1..<A.count {
-        if A[i] < a.count {
-            a[A[i]] += 1
+
+    for i in 0..<A.count {
+        if A[i] < a.count + 1 {
+            a[A[i] - 1] += 1
         } else {
             return 0
         }
     }
     
-    for i in 1..<a.count {
+    for i in 0..<a.count {
         if a[i] != 1 {
             return 0
         }
