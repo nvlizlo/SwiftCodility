@@ -4,15 +4,16 @@ import UIKit
 
 public func solution(_ A : inout [Int]) -> Int {
     let sum = A.reduce(0, +)
-    var leftSum = A[0]
-    var rightSum = sum - leftSum
-    var minDifference = abs(rightSum - leftSum)
-    for i in 1..<A.count - 1 {
+    var leftSum = 0
+    var rightSum = 0
+    var minDifference = Int.max
+
+    for i in 0..<A.count - 1 {
         leftSum += A[i]
         rightSum = sum - leftSum
         minDifference = min(minDifference, abs(rightSum - leftSum))
     }
-    
+
     return minDifference
 }
 
