@@ -3,23 +3,20 @@
 import UIKit
 
 public func solution(_ X : Int, _ A : inout [Int]) -> Int {
-    
-    var occurs:[Int] = Array(repeating: -1, count: X + 1)
+    var occurs: [Int] = Array(repeating: -1, count: X + 1)
 
     for i in 0..<A.count {
         if occurs[A[i]] == -1 {
             occurs[A[i]] = i
         }
     }
-    
+
     occurs.removeFirst()
-    
+
     if (occurs.filter { $0 == -1 }).count == 0 {
-        return occurs.max(by: { a, b in
-            a < b
-        }) ?? 0
+        return occurs.max(by: <) ?? 0
     }
-    
+
     return -1
 }
 
