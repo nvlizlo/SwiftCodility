@@ -4,14 +4,15 @@ import UIKit
 
 public func solution(_ A : inout [Int]) -> Int {
     A.append(0)
-    var sumA = 0
-    var sumF = 0
+    var arraySum = 0
+    var fullSum = 0
+
     for i in 0..<A.count {
-        sumA += A[i]
-        sumF += (i + 1)
+        arraySum += A[i]
+        fullSum += (i + 1)
     }
-    
-    return sumF - sumA
+
+    return fullSum - arraySum
 }
 
 var array = [2, 3, 1, 5]
