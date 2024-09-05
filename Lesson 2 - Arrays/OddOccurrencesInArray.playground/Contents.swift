@@ -3,7 +3,7 @@
 import UIKit
 
 func solution(_ A: inout [Int]) -> Int {
-    return A.reduce(0, ^)
+    A.reduce(0, ^)
 }
 
 var array = [4,1,4]
