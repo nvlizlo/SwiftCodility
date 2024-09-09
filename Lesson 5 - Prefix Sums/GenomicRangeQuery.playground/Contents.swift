@@ -4,12 +4,12 @@ import UIKit
 
 public func solution(_ S : inout String, _ P : inout [Int], _ Q : inout [Int]) -> [Int] {
     var solution = Array(repeating: 0, count: P.count)
-    var lastAOccurences = Array(repeating: -1, count: S.characters.count)
-    var lastCOccurences = Array(repeating: -1, count: S.characters.count)
-    var lastGOccurences = Array(repeating: -1, count: S.characters.count)
-    var lastTOccurences = Array(repeating: -1, count: S.characters.count)
+    var lastAOccurences = Array(repeating: -1, count: S.count)
+    var lastCOccurences = Array(repeating: -1, count: S.count)
+    var lastGOccurences = Array(repeating: -1, count: S.count)
+    var lastTOccurences = Array(repeating: -1, count: S.count)
     
-    for i in 0..<S.characters.count {
+    for i in 0..<S.count {
         write(lastCharacter: "A", inArray: &lastAOccurences, atIndex: i, from: S)
         write(lastCharacter: "C", inArray: &lastCOccurences, atIndex: i, from: S)
         write(lastCharacter: "G", inArray: &lastGOccurences, atIndex: i, from: S)
