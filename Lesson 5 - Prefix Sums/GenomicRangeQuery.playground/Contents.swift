@@ -41,8 +41,41 @@ func write(lastCharacter c: Character, inArray lastOccurencesArray: inout [Int],
     }
 }
 
+func solution2(_ S : inout String, _ P : inout [Int], _ Q : inout [Int]) -> [Int] {
+    let S = S as NSString
+    var solution = Array(repeating: 0, count: P.count)
+
+    var pA = Array(repeating: 0, count: S.length + 1)
+    var pC = Array(repeating: 0, count: S.length + 1)
+    var pG = Array(repeating: 0, count: S.length + 1)
+
+    for i in 1..<S.length + 1 {
+        let character = S.character(at: i - 1)
+        pA[i] = pA[i - 1] + (character == 65 ? 1 : 0)
+        pC[i] = pC[i - 1] + (character == 67 ? 1 : 0)
+        pG[i] = pG[i - 1] + (character == 71 ? 1 : 0)
+    }
+
+    for i in 0..<P.count {
+        let upperBound = Q[i] + 1
+        let lowerBound = P[i]
+
+        if pA[upperBound] - pA[lowerBound] > 0 {
+            solution[i] = 1
+        } else if pC[upperBound] - pC[lowerBound] > 0 {
+            solution[i] = 2
+        } else if pG[upperBound] - pG[lowerBound] > 0 {
+            solution[i] = 3
+        } else {
+            solution[i] = 4
+        }
+    }
+
+    return solution
+}
+
 var dna = "CAGCCTA"
 var p = [2, 5, 0]
 var q = [4, 5, 6]
 
-solution(&dna, &p, &q)
+solution2(&dna, &p, &q)
