@@ -1,7 +1,6 @@
 import UIKit
 
 public func solution(_ A : inout [Int]) -> Int {
-    
     guard !A.isEmpty, A.count <= 100_000 else { return 0 }
 
     let maxValue = A.max() ?? 0
