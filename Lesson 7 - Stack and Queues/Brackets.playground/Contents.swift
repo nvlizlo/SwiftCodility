@@ -1,38 +1,31 @@
 import Foundation
 
-func destroy(c: Character, c1: Character) -> Bool {
-    if c == "{" && c1 == "}" || c == "[" && c1 == "]" || c == "(" && c1 == ")" {
-        return true
-    }
-    return false
+func canDestroy(c1: Character, c2: Character) -> Bool {
+    c1 == "{" && c2 == "}" || c1 == "[" && c2 == "]" || c1 == "(" && c2 == ")"
 }
 
 public func solution(_ S : inout String) -> Int {
-    if S.isEmpty {
-        return 1
-    }
-    
+    guard !S.isEmpty else { return 1 }
+
     var characters = S.map { $0 as Character }
-    
+
     var stack = [Character]()
     stack.append(characters.first!)
-    
+
     for i in 1..<characters.count {
-        if !stack.isEmpty {
-            let lastStack = stack.last!
-            stack.append(characters[i])
-            
-            if destroy(c: lastStack, c1: stack.last!) {
-                let _ = stack.popLast()
-                let _ = stack.popLast()
-            }
-            
-        } else {
+        guard !stack.isEmpty else {
             stack.append(characters[i])
             continue
         }
+
+        let previousLastStackElement = stack.last!
+        stack.append(characters[i])
+
+        if canDestroy(c1: previousLastStackElement, c2: stack.last!) {
+            stack.popLast()
+            stack.popLast()
+        }
     }
-    
     return stack.isEmpty ? 1 : 0
 }
 
