@@ -3,12 +3,12 @@
 import UIKit
 
 public func solution(_ A : inout [Int]) -> Int {
-    if A.count > 2 {
-        A.sort()
-        for i in 2..<A.count {
-            if A[i-2]+A[i-1] > A[i], A[i-1]+A[i] > A[i-2], A[i]+A[i-2] > A[i-1] {
-                return 1
-            }
+    guard A.count > 2 else { return 0 }
+    A.sort()
+
+    for i in 2..<A.count {
+        if A[i - 2] + A[i - 1] > A[i] {
+            return 1
         }
     }
     return 0
