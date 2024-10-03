@@ -1,4 +1,6 @@
-//: Playground - noun: a place where people can play
+// Codility task - https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/
+// If you like the solution, please vote on stackoverflow(the 2nd solution) - https://stackoverflow.com/a/78966396/3542688
+// Or hit me a star on github - https://github.com/nvlizlo/SwiftCodility
 
 import UIKit
 

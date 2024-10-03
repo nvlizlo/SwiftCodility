@@ -1,3 +1,7 @@
+// Codility task - https://app.codility.com/programmers/lessons/7-stacks_and_queues/nesting/
+// If you like the solution, please vote on stackoverflow - https://stackoverflow.com/a/79049899/3542688
+// Or hit me a star on github - https://github.com/nvlizlo/SwiftCodility
+
 import UIKit
 
 public func solution(_ S : inout String) -> Int {

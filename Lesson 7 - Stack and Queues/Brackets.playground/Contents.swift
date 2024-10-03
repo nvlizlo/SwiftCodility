@@ -1,3 +1,7 @@
+// Codility task - https://app.codility.com/programmers/lessons/7-stacks_and_queues/brackets/
+// If you like the solution, please vote on stackoverflow - https://stackoverflow.com/a/78966917/3542688
+// Or hit me a star on github - https://github.com/nvlizlo/SwiftCodility
+
 import Foundation
 
 func canDestroy(c1: Character, c2: Character) -> Bool {

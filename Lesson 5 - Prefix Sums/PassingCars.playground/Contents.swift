@@ -1,4 +1,6 @@
-//: Playground - noun: a place where people can play
+// Codility task - https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/
+// If you like the solution, please vote on stackoverflow - https://stackoverflow.com/a/78956239/3542688
+// Or hit me a star on github - https://github.com/nvlizlo/SwiftCodility
 
 import UIKit
 

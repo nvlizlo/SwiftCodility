@@ -1,3 +1,7 @@
+// Codility task - https://app.codility.com/programmers/lessons/6-sorting/number_of_disc_intersections/
+// If you like the solution, please vote on stackoverflow - https://stackoverflow.com/a/78966882/3542688
+// Or hit me a star on github - https://github.com/nvlizlo/SwiftCodility
+
 import UIKit
 
 public func solution(_ A : inout [Int]) -> Int {

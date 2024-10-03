@@ -1,3 +1,7 @@
+// Codility task - https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/
+// If you like the solution, please vote on stackoverflow - https://stackoverflow.com/a/78974122/3542688
+// Or hit me a star on github - https://github.com/nvlizlo/SwiftCodility
+
 import UIKit
 
 public func solution(_ A : inout [Int], _ B : inout [Int]) -> Int {

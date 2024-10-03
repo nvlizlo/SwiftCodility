@@ -1,4 +1,6 @@
-//: Playground - noun: a place where people can play
+// Codility task - https://app.codility.com/programmers/lessons/6-sorting/max_product_of_three/
+// If you like the solution, please vote on stackoverflow - https://stackoverflow.com/a/78966839/3542688
+// Or hit me a star on github - https://github.com/nvlizlo/SwiftCodility
 
 import UIKit
 
